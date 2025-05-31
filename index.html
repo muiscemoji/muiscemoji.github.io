@@ -181,27 +181,7 @@
 </head>
 <body>
     <div class="tgme_page">
-        <img class="emoji-image" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Objects/Key.webp" alt="Key" style="width: 8rem;margin: 1rem;">  
-        <a class="tgme_action_button_new" href="#" id="permissionBtn">ПРЕДОСТАВИТЬ РАЗРЕШЕНИЕ</a>
+        <img class="emoji-image" src="" alt="Key" style="width: 8rem;margin: 1rem;">
     </div>
-
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script>
-        let tg = window.Telegram.WebApp;
-        tg.expand();
-        
-        let btn = document.getElementById("permissionBtn");
-        btn.addEventListener("click", () => {
-            tg.requestEmojiStatusAccess();
-        });
-        
-        tg.onEvent('emojiStatusAccessRequested', function (event) {
-            if (event.status === 'allowed') {
-                const data = {btn: 1};
-                tg.sendData(JSON.stringify(data));
-                tg.close();
-            }
-        });
-    </script>
 
 </body></html>
